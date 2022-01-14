@@ -137,6 +137,20 @@ class SocialiteManager extends Manager implements Contracts\Factory
     }
 
     /**
+     * Set the container instance used by the manager.
+     *
+     * @param  \Illuminate\Contracts\Container\Container  $container
+     * @return $this
+     */
+    public function setContainer($container)
+    {
+        $this->app = $container;
+        $this->container = $container;
+
+        return $this;
+    }
+
+    /**
      * Get the default driver name.
      *
      * @throws \InvalidArgumentException
